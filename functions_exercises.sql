@@ -25,6 +25,9 @@ WHERE last_name LIKE 'E%' OR last_name LIKE '%E';
 SELECT * FROM employees
 WHERE last_name LIKE 'E%E';
 
+SELECT * FROM employees
+WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%';
+
 SELECT CONCAT(first_name, ' ', last_name)
     AS fullName
     FROM employees
@@ -53,6 +56,5 @@ FROM employees
 WHERE month(birth_date) = 12
   AND day(birth_date) = 25 AND year(hire_date) LIKE '199%' ORDER BY DATEDIFF(CURDATE(), hire_date) DESC;
 
-SELECT * FROM employees
-WHERE last_name LIKE '%q%' AND last_name NOT LIKE '%qu%';
+
 
