@@ -38,3 +38,5 @@ FROM salaries s
 WHERE dm.to_date LIKE '9%'
     AND s.to_date LIKE '9%'
 ORDER BY d.dept_name;
+
+
